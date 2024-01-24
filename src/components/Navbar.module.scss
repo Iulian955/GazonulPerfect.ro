@@ -1,0 +1,87 @@
+@import "./../main.module.scss";
+@import "./../data/themes.scss";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  height: 70px;
+  max-width: 1200px;
+  width: 100vw;
+  position: sticky;
+  left: 0%;
+  z-index: 1000;
+  margin: auto;
+
+  @include media("<tablet") {
+    padding: 0 1%;
+  }
+}
+.logoWrapper {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include flexCenter;
+
+  @include media("<tablet") {
+    grid-column: span 3;
+  }
+  img {
+    height: 40px;
+
+    @include media("<tablet") {
+      width: 100%;
+    }
+  }
+}
+
+.menuItems {
+  grid-column: span 8;
+  @include media("<tablet") {
+    display: none;
+  }
+}
+
+.navItems {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 0px;
+  column-gap: 1%;
+  height: 100%;
+  padding-right: 6%;
+
+  li {
+    display: flex;
+    align-items: center;
+    color: #858585;
+    justify-content: center;
+    cursor: pointer;
+    min-width: 90px;
+    white-space: nowrap;
+    &:hover {
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+
+.active {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  color: white !important;
+  padding: 3px 11px;
+}
+
+.HashLinkStyle {
+  color: white;
+
+  text-decoration: none;
+  &:hover {
+    color: white;
+    font-weight: bolder;
+    border-bottom: 2px solid black;
+  }
+}

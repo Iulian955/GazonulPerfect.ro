@@ -1,84 +1,67 @@
 import React from "react";
-import styles from "./Contact.module.scss";
-import contactlogo from "../../media/riona/contactBoy.png";
+import styles from "../Contact/Contact.module.scss";
+import images from "./../../data/images";
 
 const Contact = () => {
-  const submitMessage = () => {
-    console.log("MESSAGE SENT");
-  };
-
   return (
-    <div className={styles.contact}>
-      <div className={styles.container1}>
-        <div className={styles.contactSection}>
-          <h1>Contacteaza-ne</h1>
-          <p>
-            Punete in contact direct cu unul din consultanti nostri si te vom ajuta sa iti duci afacerea la urmatorul
-            nivel
-          </p>
-        </div>
+    <div className={styles.contactContainer}>
+      <div className={styles.headTitle}>Contact</div>
 
-        <div className={styles.emailSection}>
-          <h1>Email</h1>
-          <p>info@riona.ro</p>
+      <div className={styles.firstSectionContact}>
+        <div className={styles.contactMap}>
+          <img src={images.contact.map} alt="map" />
         </div>
-
-        <div className={styles.phoneSection}>
-          <h1>Telefon</h1>
-          <p>+40 728 711 602</p>
+        <div className={styles.contactForm}>
+          <div className={styles.formTitle}>Contacteaza-ne</div>
+          <div className={styles.contactInputs}>
+            <input placeholder="Nume" />
+            <input placeholder="Email" />
+            <input placeholder="Telefon" />
+            <textarea placeholder="Mesaj" />
+            <div className={styles.formBox}>
+              <input type="checkbox" className={styles.formCheck} />
+              <label>Accept procesarea datelor cu caracter personal</label>
+            </div>
+          </div>
+          <div className={styles.sendBtn}>
+            <button>Trimite mesajul</button>
+          </div>
         </div>
-
-        <div className={styles.socialSection}>
-          <h1>Socials</h1>
-          <p>Instagram</p>
-          <p>Twitter</p>
-          <p>Facebook</p>
-        </div>
-
-        <img className={styles.contactLogo} src={contactlogo} alt="logo" />
       </div>
 
-      <div className={styles.container2}>
-        <div className={styles.mobileHeader}>
-          <img className={styles.mobileLogo} src={contactlogo} alt="contact" />
-          Contacteaza-ne
+      <div className={styles.secondSectionContact}>
+        <div className={styles.infos}>
+          <div className={styles.contactInfo}>
+            <div className={styles.infoPhoto}>
+              <img src={images.contact.mailLogo} alt="mail" />
+            </div>
+            <div className={styles.infoTitle}>Email</div>
+            <div className={styles.infoSubTitle}>gazonulverde@yahoo.com</div>
+          </div>
+          <div className={styles.contactInfo}>
+            <div className={styles.infoPhoto}>
+              <img src={images.contact.mailLogo} alt="mail" />
+            </div>
+            <div className={styles.infoTitle}>Adresa</div>
+            <div className={styles.infoSubTitle}>gazonulverde@yahoo.com</div>
+          </div>
+
+          <div className={styles.contactInfo}>
+            <div className={styles.infoPhoto}>
+              <img src={images.contact.mailLogo} alt="mail" />
+            </div>
+            <div className={styles.infoTitle}>Telefon</div>
+            <div className={styles.infoSubTitle}>gazonulverde@yahoo.com</div>
+          </div>
+
+          <div className={styles.contactInfo}>
+            <div className={styles.infoPhoto}>
+              <img src={images.contact.mailLogo} alt="mail" />
+            </div>
+            <div className={styles.infoTitle}>Email</div>
+            <div className={styles.infoSubTitle}>gazonulverde@yahoo.com</div>
+          </div>
         </div>
-        <form>
-          <div className={styles.inputs}>
-            <label> Nume </label>
-            <input></input>
-          </div>
-
-          <div className={styles.inputs}>
-            <label> Email </label>
-            <input></input>
-          </div>
-
-          <div className={styles.inputs}>
-            <label> Telefon </label>
-            <input></input>
-          </div>
-
-          <div className={styles.selection}>
-            <label>Selecteaza pachetul </label>
-            <select>
-              <option selected value=".">
-                Doresc pachetul...
-              </option>
-              <option value="brandingBasic">Branding Basic</option>
-              <option value="brandingVIP">Branding VIP</option>
-            </select>
-          </div>
-
-          <div className={styles.textareaSection}>
-            <label>Mesaj</label>
-            <textarea></textarea>
-          </div>
-
-          <div className={styles.submitSection}>
-            <button onClick={submitMessage}>{"Trimite"}</button>
-          </div>
-        </form>
       </div>
     </div>
   );

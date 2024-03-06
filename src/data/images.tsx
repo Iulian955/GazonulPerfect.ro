@@ -1,70 +1,54 @@
 const images = {
-  rionaLogo: require("./../media/riona/riona_alb.svg").default,
-  rionaLogoBlack: require("./../media/riona/riona_negru.svg").default,
-  heroBoy:
-    "https://firebasestorage.googleapis.com/v0/b/daniancaro-23015.appspot.com/o/ProiecteRiona%2FHomepage%2FheroBoy.png?alt=media&token=8101a49e-e71c-4f1d-beeb-fe077cda2a97",
-  logoBrands: require("./../media/riona/icons/logoBrands.svg").default,
-  arrowRiona: require("./../media/riona/arrow.svg").default,
-  infoIcon: require("./../media/riona/infoIcon.svg").default,
-  mic: require("./../media/riona/mic.svg").default,
-  medii: require("./../media/riona/medii.svg").default,
-  mare: require("./../media/riona/mare.svg").default,
-  socials: {
-    instagram: require("./../media/riona/icons/instagram.svg").default,
-    facebook: require("./../media/riona/icons/facebook.svg").default,
-    twitter: require("./../media/riona/icons/twitter.svg").default
+  homepage: {
+    frunza: require("./../media/assets/pics/homepage/frunza.svg").default,
+    irigatii: require("./../media/assets/pics/homepage/irigatii.svg").default,
+    proiecte: require("./../media/assets/pics/homepage/proiecte.svg").default,
+    sisteme: require("./../media/assets/pics/homepage/sisteme.svg").default,
+    bg: require("./../media/assets/pics/homepage/homepageBg.jpeg").default,
+    service1: require("./../media/assets/pics/homepage/service1.jpeg").default,
+    service8: require("./../media/assets/pics/homepage/service8.jpeg").default,
+    service2: require("./../media/assets/pics/homepage/service2.jpeg").default,
+    service3: require("./../media/assets/pics/homepage/service3.jpeg").default,
+    service4: require("./../media/assets/pics/homepage/service4.jpeg").default,
+    service5: require("./../media/assets/pics/homepage/service5.jpeg").default,
+    service6: require("./../media/assets/pics/homepage/service6.jpeg").default,
+    service7: require("./../media/assets/pics/homepage/service7.jpeg").default,
+    icon: require("./../media/assets/pics/homepage/icon.svg").default
   },
 
-  sapunCarbune: require("./../media/assets/pics/prezentareCarbune/carbune.png").default,
-  deliveryCar: require("./../media/assets/pics/prezentareCarbune/delivery.png").default,
-  logo: require("./../media/assets/montanAirLogo.png").default,
-  star: require("./../media/assets/pics/prezentareCarbune/star_review.png").default,
-  cartLogo: require("./../media/assets/cart.png").default,
-  arrowRight: require("./../media/assets/pics/prezentareCarbune/next.png").default,
-  arrowDown: require("./../media/assets/pics/prezentareCarbune/arrowDown.png").default,
-  heartIcon: require("./../media/assets/pics/prezentareCarbune/heart.png").default,
-  montanLogo: require("./../media/assets/pics/prezentareCarbune/montanLogo.png").default,
-  ROFlag: require("../media/assets/pics/prezentareCarbune/flagRO.jpg").default,
-  featuredProduct: require("./../media/assets/pics/prezentareCarbune/montanairFeatured.jpg").default,
-  cookieIcon: require("./../media/assets/cookie.png").default,
-  relaxBackground: require("./../media/assets/pics/blocks/background_Montan.jpg").default,
-  coalCartoon: require("./../media/assets/coal_cartoon.png").default,
-  finishOrder: require("./../media/assets/open-box.png").default,
-  noProduct: require("./../media/assets/pics/prezentareCarbune/noProduct.png").default,
-  verifiedPurchase: require("./../media/assets/checked.png").default,
-  closeIcon: require("./../media/assets/closeButton.svg").default,
-  newsletterHands: require("./../media/assets/handsNewsletter.webp").default,
-  refundIcon:
-    "https://firebasestorage.googleapis.com/v0/b/diniubire-89ce0.appspot.com/o/icons%2FRectangle%202.png?alt=media&token=4ec69e4d-eebc-477e-ab7c-fdf07c5f1a99",
-  ingredients: {
-    vitaminaC: require("./../media/assets/pics/prezentareCarbune/ingredients/vitaminaC.png").default,
-    argila: require("./../media/assets/pics/prezentareCarbune/ingredients/argila.png").default,
-    carbon: require("./../media/assets/pics/prezentareCarbune/ingredients/carbon.png").default
+  logos: {
+    logo: require("./../media/assets/pics/logos/logo.svg").default,
+    letterLogo: require("./../media/assets/pics/logos/letterLogo.svg").default,
+    phoneLogo: require("./../media/assets/pics/logos/phoneLogo.svg").default,
+    asfor: require("./../media/assets/pics/logos/asfor.svg").default,
+    iso2015: require("./../media/assets/pics/logos/iso2015.svg").default,
+    isoBlue: require("./../media/assets/pics/logos/isoBlue.svg").default,
+    location: require("./../media/assets/pics/logos/location.svg").default
   },
 
-  socialIcons: {
-    facebook: require("./../media/assets/pics/prezentareCarbune/facebook.png").default,
-    instagram: require("./../media/assets/pics/prezentareCarbune/instagram.png").default,
-    whatsapp: require("./../media/assets/pics/prezentareCarbune/whatsapp.png").default
-  },
-  sapunMontan: {
-    image: require("./../media/assets/pics/prezentareCarbune/pozeProduse/sapunCarbune.jpg").default,
-    image2: require("./../media/assets/pics/prezentareCarbune/pozeProduse/pastaDinti.jpg").default,
-    image3: require("./../media/assets/pics/prezentareCarbune/pozeProduse/unguent.jpg").default
-  },
-  cremaScrub: {
-    image: require("./../media/assets/pics/prezentareCarbune/pozeProduse/pastaDinti.jpg").default,
-    image2: require("./../media/assets/pics/prezentareCarbune/pozeProduse/sapunCarbune.jpg").default,
-    image3: require("./../media/assets/pics/prezentareCarbune/pozeProduse/unguent.jpg").default
-  },
-  pachetScrubSapun: {
-    image: require("./../media/assets/pics/prezentareCarbune/pozeProduse/unguent.jpg").default,
-    image2: require("./../media/assets/pics/prezentareCarbune/pozeProduse/pastaDinti.jpg").default,
-    image3: require("./../media/assets/pics/prezentareCarbune/pozeProduse/sapunCarbune.jpg").default
+  servicesImg: {
+    headBg: require("./../media/assets/pics/servicesImg/headBg.jpeg").default,
+    p1: require("./../media/assets/pics/servicesImg/p1.jpeg").default,
+    p2: require("./../media/assets/pics/servicesImg/p2.jpeg").default,
+    p3: require("./../media/assets/pics/servicesImg/p3.jpeg").default,
+    p4: require("./../media/assets/pics/servicesImg/p4.jpeg").default,
+    p5: require("./../media/assets/pics/servicesImg/p5.jpeg").default,
+    pp1: require("./../media/assets/pics/servicesImg/pp1.jpeg").default,
+    pp2: require("./../media/assets/pics/servicesImg/pp2.jpeg").default,
+    pp3: require("./../media/assets/pics/servicesImg/pp3.jpeg").default,
+    pp4: require("./../media/assets/pics/servicesImg/pp4.jpeg").default,
+    pp5: require("./../media/assets/pics/servicesImg/pp5.jpeg").default,
+    pp6: require("./../media/assets/pics/servicesImg/pp6.jpeg").default,
+    pp7: require("./../media/assets/pics/servicesImg/pp7.jpeg").default,
+    pp8: require("./../media/assets/pics/servicesImg/pp8.jpeg").default,
+    pp9: require("./../media/assets/pics/servicesImg/pp9.jpeg").default,
+    pp10: require("./../media/assets/pics/servicesImg/pp10.jpeg").default,
+    dotari: require("./../media/assets/pics/servicesImg/dotari.svg").default
   },
 
-  blogsPosts: {
-    firstPost: require("./../media/assets/pics/prezentareCarbune/blogs/dermatita.jpg").default
+  contact: {
+    mailLogo: require("./../media/assets/pics/contact/mailLogo.svg").default,
+    map: require("./../media/assets/pics/contact/map.png").default
   }
 };
 

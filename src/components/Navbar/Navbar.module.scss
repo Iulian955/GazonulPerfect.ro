@@ -7,7 +7,7 @@ $myColor: #f26622;
 
 .header {
   width: 100%;
-  max-width: 100rem;
+  // max-width: 100rem;
   height: 90px;
   margin: auto;
   background: white;
@@ -356,6 +356,53 @@ nav ul li a {
   }
 }
 
+.phoneNavbar1 {
+  display: none;
+
+  @include media("<tablet") {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    div {
+      color: white;
+      font-family: "Montserrat";
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      @include media("<tablet") {
+        font-size: 18px;
+      }
+      @include media(">=tablet", "<desktop") {
+        font-size: 18px;
+      }
+    }
+  }
+  @include media(">=tablet", "<desktop") {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    div {
+      color: white;
+      font-family: "Montserrat";
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      @include media("<tablet") {
+        font-size: 18px;
+      }
+      @include media(">=tablet", "<desktop") {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
 .mailNavbar {
   display: flex;
   align-items: center;
@@ -374,6 +421,50 @@ nav ul li a {
     }
     @include media(">=tablet", "<desktop") {
       font-size: 18px;
+    }
+  }
+}
+
+.mailNavbar1 {
+  display: none;
+  @include media("<tablet") {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    div {
+      color: white;
+      font-family: "Montserrat";
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: left;
+      @include media("<tablet") {
+        font-size: 18px;
+      }
+      @include media(">=tablet", "<desktop") {
+        font-size: 18px;
+      }
+    }
+  }
+  @include media(">=tablet", "<desktop") {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    div {
+      color: white;
+      font-family: "Montserrat";
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: left;
+      @include media("<tablet") {
+        font-size: 18px;
+      }
+      @include media(">=tablet", "<desktop") {
+        font-size: 18px;
+      }
     }
   }
 }

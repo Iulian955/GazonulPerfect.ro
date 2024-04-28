@@ -1,3 +1,4 @@
+import Portofoliu from "../components/Portofoliu/Portofoliu";
 const images = {
   homepage: {
     frunza: require("./../media/assets/pics/homepage/frunza.svg").default,
@@ -13,7 +14,24 @@ const images = {
     service5: require("./../media/assets/pics/homepage/service5.jpeg").default,
     service6: require("./../media/assets/pics/homepage/service6.jpeg").default,
     service7: require("./../media/assets/pics/homepage/service7.jpeg").default,
-    icon: require("./../media/assets/pics/homepage/icon.svg").default
+    icon: require("./../media/assets/pics/homepage/icon.svg").default,
+    iconWhite: require("./../media/assets/pics/homepage/iconWhite.svg").default,
+    irigatii2: require("./../media/assets/pics/homepage/irigatii2.svg").default,
+    utilaje2: require("./../media/assets/pics/homepage/utilaje2.svg").default,
+    expert2: require("./../media/assets/pics/homepage/expert2.svg").default,
+    defris1: require("./../media/assets/pics/homepage/defris1.jpeg").default,
+    defris2: require("./../media/assets/pics/homepage/defris2.jpeg").default,
+    defris3: require("./../media/assets/pics/homepage/defris3.jpeg").default,
+    defris4: require("./../media/assets/pics/homepage/defris4.jpeg").default,
+    iri1: require("./../media/assets/pics/homepage/iri1.jpeg").default,
+    iri2: require("./../media/assets/pics/homepage/iri2.jpeg").default,
+    iri3: require("./../media/assets/pics/homepage/iri3.jpeg").default,
+    iri4: require("./../media/assets/pics/homepage/iri4.jpeg").default,
+    iri5: require("./../media/assets/pics/homepage/iri5.jpeg").default,
+    sv1: require("./../media/assets/pics/homepage/sv1.jpg").default,
+    sv2: require("./../media/assets/pics/homepage/sv2.jpg").default,
+    sv3: require("./../media/assets/pics/homepage/sv3.jpeg").default,
+    sv4: require("./../media/assets/pics/homepage/sv4.jpeg").default
   },
 
   logos: {
@@ -43,12 +61,80 @@ const images = {
     pp8: require("./../media/assets/pics/servicesImg/pp8.jpeg").default,
     pp9: require("./../media/assets/pics/servicesImg/pp9.jpeg").default,
     pp10: require("./../media/assets/pics/servicesImg/pp10.jpeg").default,
-    dotari: require("./../media/assets/pics/servicesImg/dotari.svg").default
+    dotari: require("./../media/assets/pics/servicesImg/dotari.svg").default,
+    new: require("./../media/assets/pics/servicesImg/new.jpeg").default
   },
 
   contact: {
     mailLogo: require("./../media/assets/pics/contact/mailLogo.svg").default,
-    map: require("./../media/assets/pics/contact/map.png").default
+    map: require("./../media/assets/pics/contact/map.png").default,
+    location1: require("./../media/assets/pics/contact/location1.svg").default,
+    date1: require("./../media/assets/pics/contact/date1.svg").default,
+    phone1: require("./../media/assets/pics/contact/phone1.svg").default
+  },
+
+  portofoliu: {
+    sistemedeirigatii1: require("./../media/assets/pics/portofoliu/port1.jpeg").default,
+    sistemedeirigatii2: require("./../media/assets/pics/portofoliu/port2.jpeg").default,
+    sistemedeirigatii3: require("./../media/assets/pics/portofoliu/port3.jpeg").default,
+    dezapezire1: require("./../media/assets/pics/portofoliu/port4.jpeg").default,
+    dezapezire2: require("./../media/assets/pics/portofoliu/port5.jpeg").default,
+    dezapezire3: require("./../media/assets/pics/portofoliu/port6.jpeg").default,
+    defrisare1: require("./../media/assets/pics/portofoliu/port7.jpeg").default,
+    defrisare2: require("./../media/assets/pics/portofoliu/port8.jpeg").default,
+    defrisare3: require("./../media/assets/pics/portofoliu/port9.jpeg").default,
+    spatiiverzi1: require("./../media/assets/pics/portofoliu/port10.jpeg").default,
+    spatiiverzi2: require("./../media/assets/pics/portofoliu/port11.jpeg").default,
+    spatiiverzi3: require("./../media/assets/pics/portofoliu/port12.jpeg").default,
+    defr1: require("./../media/assets/pics/portofoliu/defr1.jpeg").default,
+    defr2: require("./../media/assets/pics/portofoliu/defr2.jpeg").default,
+    defr3: require("./../media/assets/pics/portofoliu/defr3.jpeg").default,
+    defr4: require("./../media/assets/pics/portofoliu/defr4.jpeg").default,
+    defr5: require("./../media/assets/pics/portofoliu/defr5.jpeg").default,
+    defr6: require("./../media/assets/pics/portofoliu/defr6.jpeg").default,
+    defr7: require("./../media/assets/pics/portofoliu/defr7.jpeg").default,
+    defr8: require("./../media/assets/pics/portofoliu/defr8.jpeg").default,
+    defr9: require("./../media/assets/pics/portofoliu/defr9.jpeg").default,
+    irig1: require("./../media/assets/pics/portofoliu/irig1.jpeg").default,
+    irig2: require("./../media/assets/pics/portofoliu/irig2.jpeg").default,
+    irig3: require("./../media/assets/pics/portofoliu/irig3.jpeg").default,
+    irig4: require("./../media/assets/pics/portofoliu/irig4.jpeg").default,
+    irig5: require("./../media/assets/pics/portofoliu/irig5.jpeg").default,
+    irig6: require("./../media/assets/pics/portofoliu/irig6.jpeg").default,
+    irig7: require("./../media/assets/pics/portofoliu/irig7.jpeg").default,
+    verde1: require("./../media/assets/pics/portofoliu/verde1.jpg").default,
+    verde2: require("./../media/assets/pics/portofoliu/verde1.jpg").default,
+    verde3: require("./../media/assets/pics/portofoliu/verde3.jpg").default,
+    verde4: require("./../media/assets/pics/portofoliu/verde4.jpeg").default,
+    verde5: require("./../media/assets/pics/portofoliu/verde5.jpeg").default,
+    verde6: require("./../media/assets/pics/portofoliu/verde6.jpeg").default,
+    verde7: require("./../media/assets/pics/portofoliu/verde7.jpeg").default,
+    verde8: require("./../media/assets/pics/portofoliu/verde8.jpeg").default,
+    verde9: require("./../media/assets/pics/portofoliu/verde9.jpeg").default,
+    verde10: require("./../media/assets/pics/portofoliu/verde10.jpeg").default
+  },
+
+  blog: {
+    blog1: require("./../media/assets/pics/blog/blog1.jpeg").default,
+    blog2: require("./../media/assets/pics/blog/blog2.jpeg").default,
+    blog3: require("./../media/assets/pics/blog/blog3.jpeg").default,
+    blog4: require("./../media/assets/pics/blog/blog4.jpeg").default,
+    blog5: require("./../media/assets/pics/blog/blog5.jpeg").default,
+    blog6: require("./../media/assets/pics/blog/blog6.jpeg").default
+  },
+
+  products: {
+    pr1: require("./../media/assets/pics/produse/pr1.png").default,
+    pr2: require("./../media/assets/pics/produse/pr2.png").default,
+    pr3: require("./../media/assets/pics/produse/pr3.png").default,
+    pr4: require("./../media/assets/pics/produse/pr4.png").default,
+    pr5: require("./../media/assets/pics/produse/pr5.png").default,
+    pr6: require("./../media/assets/pics/produse/pr6.png").default,
+    pr7: require("./../media/assets/pics/produse/pr7.png").default,
+    leaf: require("./../media/assets/pics/produse/leaf.svg").default,
+    mailLogo: require("./../media/assets/pics/produse/mailLogo.svg").default,
+    greenDot: require("./../media/assets/pics/produse/greenDot.svg").default,
+    gazonImg: require("./../media/assets/pics/produse/gazonImg.jpeg").default
   }
 };
 

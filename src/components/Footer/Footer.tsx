@@ -11,33 +11,51 @@ const Footer = () => {
         <div className={styles.sectionFooter}>
           <div className={styles.bigTitle}>Despre noi</div>
           <div className={styles.footerTexts}>
-            Lorem ipsum dolor sit amet consectetur. Quis cursus vel vel integer nec. Tempor leo quam dolor ullamcorper
-            orci consectetur in. Vivamus scelerisque sit in faucibus.
+            Gazonul Verde este o companie infiintata din pasiunea de a crea spatii verzi frumoase si durabile.
           </div>
-          <div className={styles.footerSocials}>
+          {/* <div className={styles.footerSocials}>
             <div> Urmareste-ne pe </div>
             <a href="https://www.facebook.com/" className="facebook">
               <FontAwesomeIcon icon={faFacebook} size="2x" color="white" opacity={0.9} />
             </a>
-          </div>
+          </div> */}
         </div>
 
         <div className={styles.sectionFooter}>
           <div className={styles.bigTitle}>Companie</div>
           <div className={styles.footerTexts}>
-            <div>Servicii</div>
-            <div>Protectia datelor</div>
-            <div>Contact</div>
+            <div>
+              <a href="/servicii"> Servicii </a>
+            </div>
+            <div>
+              {" "}
+              <a href="/protectieDate">Protectia datelor </a>
+            </div>
+            <div>
+              {" "}
+              <a href="/contact"> Contact </a>
+            </div>
           </div>
         </div>
 
         <div className={styles.sectionFooter}>
           <div className={styles.bigTitle}>Servicii</div>
           <div className={styles.footerTexts}>
-            <div>Montaj rulou gazon</div>
-            <div>Sistem de irigat</div>
-            <div>Pregatire insamantare si semanare</div>
-            <div>Proiectarea spatiilor verzi</div>
+            <div>
+              <a href="/servicii#montaj"> Montaj rulou gazon </a>
+            </div>
+            <div>
+              {" "}
+              <a href="/servicii#irigat">Sistem de irigat </a>
+            </div>
+            <div>
+              {" "}
+              <a href="/servicii#insamantare">Pregatire insamantare si semanare </a>
+            </div>
+            <div>
+              {" "}
+              <a href="/servicii#verde"> Proiectarea spatiilor verzi </a>
+            </div>
           </div>
         </div>
         <div className={styles.sectionFooter}>
@@ -45,7 +63,7 @@ const Footer = () => {
           <div className={styles.footerTexts}>
             <div>
               <img src={images.logos.location} alt="/" />
-              <div>Strada Ronda nr. 25, Chtitila, jud. Ilfov</div>
+              <div>Strada Ronda nr. 25, Chitila, jud. Ilfov</div>
             </div>
             <div>
               <img src={images.logos.phoneLogo} alt="#" />
@@ -67,7 +85,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={styles.footerName}>© 2023 Gazonul Verde S.R.L.</div>
+      <div className={styles.footerName}>© 2024 Gazonul Verde S.R.L.</div>
     </div>
   );
 };

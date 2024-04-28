@@ -29,6 +29,9 @@ const Navbar = () => {
               <a href="/">Acasa</a>
             </li>
             <li>
+              <a href="/products">Produse</a>
+            </li>
+            <li>
               <a href="/servicii">Servicii</a>
             </li>
             <li>
@@ -43,12 +46,12 @@ const Navbar = () => {
           </ul>
 
           <div className={styles.contactNav}>
-            <div className={styles.phoneNavbar}>
+            <div className={styles.phoneNavbar1}>
               <img src={images.logos.phoneLogo} alt="phone" />
               <div>0723.721.132</div>
             </div>
 
-            <div className={styles.mailNavbar}>
+            <div className={styles.mailNavbar1}>
               <img src={images.logos.letterLogo} alt="letter" />
               <div>gazonulverde@yahoo.com</div>
             </div>

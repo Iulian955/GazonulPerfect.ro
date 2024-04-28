@@ -59,7 +59,7 @@ const ServicesPage = () => {
       <div className={styles.headTitle}>Servicii</div>
 
       <div className={styles.firstSectionServices}>
-        <div className={styles.servicesItem}>
+        <div className={styles.servicesItem} id="montaj">
           <div className={styles.servImg}>
             <img src={images.servicesImg.p1} alt="servicii" />
           </div>{" "}
@@ -73,7 +73,7 @@ const ServicesPage = () => {
             </div>
           </div>
         </div>
-        <div className={styles.servicesItem}>
+        <div className={styles.servicesItem} id="irigat">
           <div className={styles.servImg}>
             <img src={images.servicesImg.p2} alt="servicii" />
           </div>{" "}
@@ -90,7 +90,7 @@ const ServicesPage = () => {
           </div>
         </div>
 
-        <div className={styles.servicesItem}>
+        <div className={styles.servicesItem} id="verde">
           <div className={styles.servImg}>
             <img src={images.servicesImg.p3} alt="servicii" />
           </div>{" "}
@@ -106,9 +106,9 @@ const ServicesPage = () => {
           </div>
         </div>
 
-        <div className={styles.servicesItem}>
+        <div className={styles.servicesItem} id="defrisare">
           <div className={styles.servImg}>
-            <img src={images.servicesImg.p4} alt="servicii" />
+            <img src={images.servicesImg.new} alt="servicii" />
           </div>{" "}
           <div className={styles.servText}>
             <div className={styles.serviceTitle}>Defrișare și curățare teren</div>
@@ -122,7 +122,7 @@ const ServicesPage = () => {
             </div>
           </div>
         </div>
-        <div className={styles.servicesItem}>
+        <div className={styles.servicesItem} id="insamantare">
           <div className={styles.servImg}>
             <img src={images.servicesImg.p5} alt="servicii" />
           </div>{" "}

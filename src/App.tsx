@@ -14,6 +14,14 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import ServicesPage from "./components/ServicesPage/ServicesPage";
 import Contact from "./components/Contact/Contact";
+import Portofoliu from "./components/Portofoliu/Portofoliu";
+import Blog from "./components/Blog/Blog";
+import Products from "./components/Products/Products";
+import SingleProduct from "./components/SingleProduct/SingleProduct";
+import SingleBlog from "./components/SingleBlog/SingleBlog";
+import CookieComponent from "./components/CookieComponent/CookieComponent";
+import ProtectieDate from "./components/ProtectieDate/ProtectieDate";
+import ContactUs from "./components/ContactUs/ContactUs";
 
 // export const ProductsContext = React.createContext<any[]>([]);
 
@@ -42,22 +50,35 @@ function App() {
   //   }
   // }, [ssProducts]);
 
+  const handleConsentAccepted = () => {
+    console.log("Consent accepted");
+  };
+
+  const handleRejectCookies = () => {
+    console.log("Cookies rejected by user.");
+  };
+
   return (
     <div className="App">
-      {/* {getCookieConsent() && <CookieConsent />} */}
-      <header className="App-header">
-        <BrowserRouter basename="/">
-          <AuthProvider>
-            <Navbar />{" "}
-            <Routes>
-              <Route path={`/`} element={<Homepage />} />
-              <Route path={`/servicii`} element={<ServicesPage />} />
-              <Route path={`/contact`} element={<Contact />} />
-            </Routes>
-            <Footer />
-          </AuthProvider>
-        </BrowserRouter>
-      </header>
+      <CookieComponent onAccept={handleConsentAccepted} onReject={handleRejectCookies} />
+      <BrowserRouter basename="/">
+        <AuthProvider>
+          <Navbar />{" "}
+          <Routes>
+            <Route path={`/`} element={<Homepage />} />
+            <Route path={`/servicii`} element={<ServicesPage />} />
+            <Route path={`/contact`} element={<Contact />} />
+            <Route path={`/contactUs`} element={<ContactUs />} />
+            <Route path={`/portofoliu`} element={<Portofoliu />} />
+            <Route path={`/blog`} element={<Blog />} />
+            <Route path="/blog/:blogId" element={<SingleBlog />} />
+            <Route path={`/products`} element={<Products />} />
+            <Route path="/products/:productId" element={<SingleProduct />} />
+            <Route path={`/protectieDate`} element={<ProtectieDate />} />
+          </Routes>
+          <Footer />
+        </AuthProvider>
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../Homepage/Homepage.module.scss";
 import images from "./../../data/images";
 import Slider from "react-slick";
@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { LuCalendarDays } from "react-icons/lu";
 import { FaArrowRight } from "react-icons/fa";
+import { blogPosts } from "../Blog/Blog";
+import { useNavigate } from "react-router-dom";
 
 type ArrowProps = {
   className?: string;
@@ -58,7 +60,7 @@ const Homepage = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     className: styles.myCarousel,
-    speed: 500,
+    speed: 400,
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
@@ -89,23 +91,56 @@ const Homepage = () => {
     ]
   };
 
-  const imagesProjects = [
-    images.homepage.service1,
-    images.homepage.service2,
-    images.homepage.service3,
-    images.homepage.service4,
-    images.homepage.service5,
-    images.homepage.service6
-  ];
+  const imagesProjects = {
+    all: [
+      images.homepage.defris1,
+      images.homepage.defris2,
+      images.homepage.defris3,
+      images.homepage.defris4,
+      images.homepage.iri1,
+      images.homepage.iri2,
+      images.homepage.iri3,
+      images.homepage.iri4,
+      images.homepage.iri5,
+      images.homepage.sv1,
+      images.homepage.sv2,
+      images.homepage.sv3,
+      images.homepage.sv4
+    ],
+    irrigation: [
+      images.homepage.iri1,
+      images.homepage.iri2,
+      images.homepage.iri3,
+      images.homepage.iri4,
+      images.homepage.iri5
+    ],
+    deforestation: [images.homepage.defris1, images.homepage.defris2, images.homepage.defris3, images.homepage.defris4],
+    greenSpaces: [images.homepage.sv1, images.homepage.sv2, images.homepage.sv3, images.homepage.sv4]
+  };
+
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  const handleCategoryClick = (category) => {
+    setActiveCategory(category);
+  };
+
+  const getLinkClass = (category) => {
+    return `${styles.link} ${activeCategory === category ? styles.activeLink : ""}`;
+  };
+
+  const navigate = useNavigate();
+
+  const handleProductClick = (blogId) => {
+    navigate(`/blog/${blogId}`);
+  };
 
   return (
     <div className={styles.homepageContainer}>
       <div className={styles.firstSection}>
         <div className={styles.texts}>
-          <div className={styles.mainTitle}>Special Clients Solution</div>
+          <div className={styles.mainTitle}>Gazonul Verde</div>
           <div className={styles.subTitle}>
-            Lorem ipsum dolor sit amet consectetur. Diam libero tincidunt nec scelerisque. Nunc amet consequat eu quam
-            diam proin gravida ac.
+            Din pasiune pentru gazon si spatii verzi. Suntem o echipa de profesionisti in domeniul spatiilor verzi.
           </div>
           <div className={styles.homeBtn}>
             <button>Contacteaza-ne</button>{" "}
@@ -136,9 +171,8 @@ const Homepage = () => {
         <div className={styles.mainTexts}>
           <div className={styles.secondSectionMainTitle}>Serviciile noastre</div>
           <div className={styles.secondSectionSubTitle}>
-            Lorem ipsum dolor sit amet consectetur. Sit cursus dolor quis quis libero eget a vestibulum urna. Pulvinar
-            aliquam auctor orci lectus placerat bibendum magna dictumst. Lorem fringilla eget viverra et lectus amet
-            malesuada.{" "}
+            Oferim o varietate de servicii ce tin de amenajarea spatiilor versi si pana la defrisarea si
+            curatarea terenurilor. Alege mereu sa lucrezi cu profesionisti.
           </div>
         </div>
 
@@ -167,54 +201,32 @@ const Homepage = () => {
             <img src={images.homepage.service6} alt="service" />
             <div className={styles.serviceTitle}>Proiectare a spațiilor  verzi</div>
           </div>
-          <div className={styles.service}>
-            <img src={images.homepage.service7} alt="service" />
-            <div className={styles.serviceTitle}>Construcții și amenajări</div>
-          </div>
-          <div className={styles.service}>
-            <img src={images.homepage.service8} alt="service" />
-            <div className={styles.serviceTitle}>Servicii de deszapezire</div>
-          </div>
         </div>
       </div>
       <div className={styles.thirdSection}>
         <div className={styles.mainTexts}>
           <div className={styles.secondSectionMainTitle}>De ce sa ne alegi pe noi</div>
           <div className={styles.secondSectionSubTitle}>
-            Lorem ipsum dolor sit amet consectetur. Sit cursus dolor quis quis libero eget a vestibulum urna. Pulvinar
-            aliquam auctor orci lectus placerat bibendum magna dictumst. Lorem fringilla eget viverra et lectus amet
-            malesuada.
+            Experienta dovedita in timp de peste 8 ani ne recomanda. Am dus cu succes la capat numeroase proiecte de
+            irigatii, amenajare spatii verzi si defrisare.
           </div>
         </div>
 
         <div className={styles.irigatii}>
           <div className={styles.sisIrigatii}>
-            <img src={images.homepage.irigatii} alt="irigatii" />
-            <div className={styles.irigatiiTitle}>Sisteme de irigatii </div>
-            <div className={styles.iritgatiiSubTitle}>
-              Lorem ipsum dolor sit amet consectetur. Tincidunt arcu egestas dignissim dolor sed sapien.
-            </div>
+            <img src={images.homepage.expert2} alt="expert" />
+            <div className={styles.irigatiiTitle}>Experti in gazon </div>
+            <div className={styles.iritgatiiSubTitle}>Gazonul este specialitatea noastra dovedita in timp</div>
           </div>
           <div className={styles.sisIrigatii}>
-            <img src={images.homepage.irigatii} alt="irigatii" />
+            <img src={images.homepage.irigatii2} alt="irigatii" />
             <div className={styles.irigatiiTitle}>Sisteme de irigatii </div>
-            <div className={styles.iritgatiiSubTitle}>
-              Lorem ipsum dolor sit amet consectetur. Tincidunt arcu egestas dignissim dolor sed sapien.
-            </div>
+            <div className={styles.iritgatiiSubTitle}>Peste 150 de proiecte de sisteme de irigatii implementate</div>
           </div>
           <div className={styles.sisIrigatii}>
-            <img src={images.homepage.irigatii} alt="irigatii" />
-            <div className={styles.irigatiiTitle}>Sisteme de irigatii </div>
-            <div className={styles.iritgatiiSubTitle}>
-              Lorem ipsum dolor sit amet consectetur. Tincidunt arcu egestas dignissim dolor sed sapien.
-            </div>
-          </div>
-          <div className={styles.sisIrigatii}>
-            <img src={images.homepage.irigatii} alt="irigatii" />
-            <div className={styles.irigatiiTitle}>Sisteme de irigatii </div>
-            <div className={styles.iritgatiiSubTitle}>
-              Lorem ipsum dolor sit amet consectetur. Tincidunt arcu egestas dignissim dolor sed sapien.
-            </div>
+            <img src={images.homepage.utilaje2} alt="utilaje" />
+            <div className={styles.irigatiiTitle}>Utilaje profesionale </div>
+            <div className={styles.iritgatiiSubTitle}>Folosim utilaje de ultima generatie in proiectele noastre.</div>
           </div>
         </div>
       </div>
@@ -223,35 +235,28 @@ const Homepage = () => {
         <div className={styles.mainTexts}>
           <div className={styles.secondSectionMainTitle}>Proiecte recente</div>
           <div className={styles.secondSectionSubTitle}>
-            Lorem ipsum dolor sit amet consectetur. Sit cursus dolor quis quis libero eget a vestibulum urna. Pulvinar
-            aliquam auctor orci lectus placerat bibendum magna dictumst. Lorem fringilla eget viverra et lectus amet
-            malesuada.
+            Va prezentam o mica parte din modul nostru de lucru si din proiectele noastre.
           </div>
         </div>
         <div className={styles.links}>
-          <a href="/">Toate</a>
-          <a href="/">Sisteme de irigatii</a>
-          <a href="/">Dezapezire</a>
-          <a href="/">Defrisare</a>
-          <a href="/">Spatii verzi</a>
+          <div className={getLinkClass("all")} onClick={() => handleCategoryClick("all")}>
+            Toate
+          </div>
+          <div className={getLinkClass("irrigation")} onClick={() => handleCategoryClick("irrigation")}>
+            Sisteme de irigatii
+          </div>
+          <div className={getLinkClass("deforestation")} onClick={() => handleCategoryClick("deforestation")}>
+            Defrisare
+          </div>
+          <div className={getLinkClass("greenSpaces")} onClick={() => handleCategoryClick("greenSpaces")}>
+            Spatii verzi
+          </div>
         </div>
         <div>
           <Slider {...settings}>
-            {imagesProjects.map((image, index) => (
+            {imagesProjects[activeCategory].map((image, index) => (
               <div key={index} className={styles.carouselImg}>
-                <img
-                  src={image}
-                  alt={`Slide ${index}`}
-                  style={{
-                    width: "100%",
-                    height: "400px",
-                    display: "block",
-                    border: "none",
-                    outline: "none",
-                    userSelect: "none",
-                    objectFit: "cover"
-                  }}
-                />
+                <img src={image} alt={`Slide ${index}`} />
               </div>
             ))}
           </Slider>
@@ -262,132 +267,46 @@ const Homepage = () => {
         <div className={styles.mainTexts}>
           <div className={styles.secondSectionMainTitle}>Articole recente</div>
           <div className={styles.secondSectionSubTitle}>
-            Lorem ipsum dolor sit amet consectetur. Sit cursus dolor quis quis libero eget a vestibulum urna. Pulvinar
-            aliquam auctor orci lectus placerat bibendum magna dictumst. Lorem fringilla eget viverra et lectus amet
-            malesuada.
+            Explorati articolele noastre pe diverse subiecte ce tin de gazon, defrisari, amenajare spatii verzi
+            si multe altele.
           </div>
         </div>
 
         <div className={styles.articles}>
-          <div className={styles.wrapperArt}>
-            <div>
-              <img className={styles.artImg} src={images.homepage.service1} alt="/" />{" "}
-            </div>
-            <div className={styles.infoContainer}>
-              <div className={styles.userContainer}>
-                <img src={images.homepage.icon} alt="icon" />
-                <div>Loredana</div>
+          {blogPosts.slice(-3).map((post) => (
+            <div key={post.id} className={styles.wrapperArt}>
+              <div>
+                <img className={styles.artImg} src={post.imageUrl} alt="/" />
               </div>
-
-              <div className={styles.dataContainer}>
-                <div>
-                  {" "}
-                  <LuCalendarDays />
+              <div className={styles.infoContainer}>
+                <div className={styles.infos}>
+                  <div className={styles.userContainer}>
+                    <img src={images.homepage.icon} alt="icon" />
+                    <div>{post.author}</div>
+                  </div>
+                  <div className={styles.dataContainer}>
+                    <div>
+                      <LuCalendarDays />
+                    </div>
+                    <div>{post.date}</div>
+                  </div>
                 </div>
-                <div>20 Decembrie 2023</div>
-              </div>
-
-              <div className={styles.greenBtn}>
-                <button>Constructii</button>
-              </div>
-            </div>
-            <div className={styles.textsContainer}>
-              <div className={styles.artMainTitle}>
-                10 sfaturi pentru montajul si intretinerea gazonului pe perioada verii
-              </div>
-              <div className={styles.artSubTitle}>
-                Montajul rulourilor de gazon in timpul verii necesita respectarea catorva pasi esentiali pentru a obtine
-                un gazon frumos si sanatos. In continuare va oferim 10 sfaturi pentru a realiza un montaj gazon Ilfov si
-                montaj gazon Bucuresti reusit si a asigura o crestere optima a rulourilor de gazon Ilfov si a rulourilor
-                de gazon Bucuresti.
-              </div>
-              <div className={styles.artBtn}>
-                <a href="/">
-                  Citeste mai mult <FaArrowRight />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className={styles.wrapperArt}>
-            <div>
-              {" "}
-              <img className={styles.artImg} src={images.homepage.service1} alt="/" />{" "}
-            </div>
-            <div className={styles.infoContainer}>
-              <div className={styles.userContainer}>
-                <img src={images.homepage.icon} alt="icon" />
-                <div>Loredana</div>
-              </div>
-
-              <div className={styles.dataContainer}>
-                <div>
-                  {" "}
-                  <LuCalendarDays />
+                <div className={styles.greenBtn}>
+                  <button>{post.category}</button>
                 </div>
-                <div>20 Decembrie 2023</div>
               </div>
-
-              <div className={styles.greenBtn}>
-                <button>Constructii</button>
-              </div>
-            </div>
-            <div className={styles.textsContainer}>
-              <div className={styles.artMainTitle}>
-                10 sfaturi pentru montajul si intretinerea gazonului pe perioada verii
-              </div>
-              <div className={styles.artSubTitle}>
-                Montajul rulourilor de gazon in timpul verii necesita respectarea catorva pasi esentiali pentru a obtine
-                un gazon frumos si sanatos. In continuare va oferim 10 sfaturi pentru a realiza un montaj gazon Ilfov si
-                montaj gazon Bucuresti reusit si a asigura o crestere optima a rulourilor de gazon Ilfov si a rulourilor
-                de gazon Bucuresti.
-              </div>
-              <div className={styles.artBtn}>
-                <a href="/">
-                  Citeste mai mult <FaArrowRight />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className={styles.wrapperArt}>
-            <div>
-              {" "}
-              <img className={styles.artImg} src={images.homepage.service1} alt="/" />{" "}
-            </div>
-            <div className={styles.infoContainer}>
-              <div className={styles.userContainer}>
-                <img src={images.homepage.icon} alt="icon" />
-                <div>Loredana</div>
-              </div>
-
-              <div className={styles.dataContainer}>
-                <div>
-                  {" "}
-                  <LuCalendarDays />
+              <div className={styles.textsContainer}>
+                <div className={styles.artMainTitle}>{post.title}</div>
+                <div className={styles.artSubTitle}>{post.subTitle}</div>
+                <div className={styles.artBtn}>
+                  <button onClick={() => handleProductClick(post.id)}>
+                    Citeste mai mult
+                    <FaArrowRight />
+                  </button>
                 </div>
-                <div>20 Decembrie 2023</div>
-              </div>
-
-              <div className={styles.greenBtn}>
-                <button>Constructii</button>
               </div>
             </div>
-            <div className={styles.textsContainer}>
-              <div className={styles.artMainTitle}>
-                10 sfaturi pentru montajul si intretinerea gazonului pe perioada verii
-              </div>
-              <div className={styles.artSubTitle}>
-                Montajul rulourilor de gazon in timpul verii necesita respectarea catorva pasi esentiali pentru a obtine
-                un gazon frumos si sanatos. In continuare va oferim 10 sfaturi pentru a realiza un montaj gazon Ilfov si
-                montaj gazon Bucuresti reusit si a asigura o crestere optima a rulourilor de gazon Ilfov si a rulourilor
-                de gazon Bucuresti.
-              </div>
-              <div className={styles.artBtn}>
-                <a href="/">
-                  Citeste mai mult <FaArrowRight />
-                </a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

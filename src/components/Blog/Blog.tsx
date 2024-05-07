@@ -5,6 +5,7 @@ import { LuCalendarDays } from "react-icons/lu";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export const blogPosts = [
   {
@@ -14,7 +15,7 @@ export const blogPosts = [
     imageUrl3: images.blog.blog1,
     imageUrl4: images.blog.blog1,
     author: "gazonperfect.ro",
-    date: "20 Decembrie 2023",
+    date: "09 Iulie 2023",
     category: "Constructii",
     title: "10 sfaturi pentru montajul si intretinerea gazonului pe perioada verii",
     subTitle:
@@ -118,7 +119,7 @@ export const blogPosts = [
     imageUrl3: images.blog.blog2,
     imageUrl4: images.blog.blog2,
     author: "gazonperfect.ro",
-    date: "20 Decembrie 2023",
+    date: "02 Iulie 2023",
     category: "Constructii",
     title: "Cum au evoluat defrisarile de terenuri in 2022",
     subTitle:
@@ -183,7 +184,7 @@ export const blogPosts = [
     imageUrl3: images.blog.blog3,
     imageUrl4: images.blog.blog3,
     author: "gazonperfect.ro",
-    date: "20 Decembrie 2023",
+    date: "29 Martie 2024",
     category: "Constructii",
     title: "Cum alegem tipul potrivit de sistem de irigatii",
     subTitle:
@@ -275,7 +276,7 @@ export const blogPosts = [
     imageUrl3: images.blog.blog4,
     imageUrl4: images.blog.blog4,
     author: "gazonperfect.ro",
-    date: "20 Decembrie 2023",
+    date: "21 August 2023",
     category: "Constructii",
     title: "Curatarea terenurilor in contextul urbanizarii",
     subTitle:
@@ -342,7 +343,7 @@ export const blogPosts = [
     imageUrl3: images.blog.blog5,
     imageUrl4: images.blog.blog5,
     author: "gazonperfect.ro",
-    date: "20 Decembrie 2023",
+    date: "17 ianuarie 2024",
     category: "Constructii",
     title: "Statistici defrisare teren in Romania",
     subTitle:
@@ -421,7 +422,7 @@ export const blogPosts = [
     imageUrl3: images.blog.blog6,
     imageUrl4: images.blog.blog6,
     author: "gazonperfect.ro",
-    date: "20 Decembrie 2023",
+    date: "22 Aprilie 2023",
     category: "Constructii",
     title: "Sisteme de irigatii potrivite pentru gazon si gradina",
     subTitle:
@@ -665,6 +666,9 @@ const Blog = () => {
 
   return (
     <div className={styles.blogContainer}>
+      <Helmet>
+        <meta name="description" content="Blog" />
+      </Helmet>
       <div className={styles.headTitle}>Blog</div>
       <div className={styles.fifthSection}>
         <div className={styles.articles}>

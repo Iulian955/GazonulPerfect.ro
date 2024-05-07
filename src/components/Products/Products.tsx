@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { orderErrors, orderProps } from "../../utils/OrderInterfaces";
 import { sendOrderConfirmation } from "../../services/emails";
+import { Helmet } from "react-helmet";
 
 export const productsData = [
   {
@@ -646,6 +647,9 @@ const Products = () => {
 
   return (
     <div className={styles.productsContainer}>
+      <Helmet>
+        <meta name="description" content="Products" />
+      </Helmet>
       <div className={styles.headTitle}>Produse</div>
       <div className={styles.products}>
         <div className={styles.categoryButtons}>

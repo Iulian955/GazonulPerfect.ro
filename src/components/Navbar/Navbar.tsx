@@ -13,6 +13,8 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const isActive = (path: string) => window.location.pathname === path;
+
   return (
     <div className={styles.header}>
       <Helmet>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "../CookieComponent/CookieComponent.module.scss";
+import { Helmet } from "react-helmet";
 
 interface CookieConsentProps {
   onAccept: () => void;
@@ -32,6 +33,9 @@ const CookieComponent: React.FC<CookieConsentProps> = ({ onAccept, onReject }) =
 
   return (
     <div className={styles.cookiesWrapper}>
+      <Helmet>
+        <meta name="description" content="Cookie" />
+      </Helmet>
       <div className={styles.cookiesContainer}>
         <div className={styles.textsCookie}>
           <div className={styles.mainTitle}>We value your privacy</div>

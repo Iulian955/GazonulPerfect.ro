@@ -3,10 +3,14 @@ import styles from "../Footer/Footer.module.scss";
 import { faLinkedin, faFacebook, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import images from "./../../data/images";
+import { Helmet } from "react-helmet";
 
 const Footer = () => {
   return (
     <div className={styles.footerContainer}>
+      <Helmet>
+        <meta name="description" content="Footer" />
+      </Helmet>
       <div className={styles.footerWrapper}>
         <div className={styles.sectionFooter}>
           <div className={styles.bigTitle}>Despre noi</div>

@@ -1,9 +1,13 @@
 import React from "react";
 import styles from "./ProtectieDate.module.scss";
+import { Helmet } from "react-helmet";
 
 const ProtectieDate = () => {
   return (
     <div className={styles.protectieContainer}>
+      <Helmet>
+        <meta name="description" content="Protectie" />
+      </Helmet>
       <div className={styles.headTitle}>Protectia Datelor</div>
 
       <div className={styles.protecText}>

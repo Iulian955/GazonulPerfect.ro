@@ -5,6 +5,7 @@ import { useLocation, useParams } from "react-router-dom";
 import { blogPosts } from "../Blog/Blog";
 import { LuCalendarDays } from "react-icons/lu";
 import { FaArrowRight } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const SingleBlog = () => {
   const { blogId } = useParams();
@@ -12,6 +13,9 @@ const SingleBlog = () => {
 
   return (
     <div className={styles.portofoliuContainer}>
+      <Helmet>
+        <meta name="description" content="SingleBlog" />
+      </Helmet>
       {blog && (
         <div className={styles.blogSection}>
           <div className={styles.headTitle}>

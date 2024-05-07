@@ -5,6 +5,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import { IoIosArrowUp } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ServicesPage = () => {
   const [visibleItems, setVisibleItems] = useState(7);
@@ -59,6 +60,9 @@ const ServicesPage = () => {
 
   return (
     <div className={styles.servicesContainer}>
+      <Helmet>
+        <meta name="description" content="Services" />
+      </Helmet>
       <div className={styles.headTitle}>Servicii</div>
 
       <div className={styles.firstSectionServices}>

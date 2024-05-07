@@ -8,6 +8,7 @@ import { LuCalendarDays } from "react-icons/lu";
 import { FaArrowRight } from "react-icons/fa";
 import { blogPosts } from "../Blog/Blog";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 type ArrowProps = {
   className?: string;
@@ -136,6 +137,9 @@ const Homepage = () => {
 
   return (
     <div className={styles.homepageContainer}>
+      <Helmet>
+        <meta name="description" content="HomePage" />
+      </Helmet>
       <div className={styles.firstSection}>
         <div className={styles.texts}>
           <div className={styles.mainTitle}>Gazonul Verde</div>

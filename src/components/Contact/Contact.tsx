@@ -5,6 +5,7 @@ import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
 import { orderErrors, orderProps } from "../../utils/OrderInterfaces";
 import { sendOrderConfirmation } from "../../services/emails";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const containerStyle = {
@@ -16,6 +17,8 @@ const Contact = () => {
     lat: 44.51693,
     lng: 25.98136
   };
+
+  const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY || "";
 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
@@ -109,6 +112,9 @@ const Contact = () => {
 
   return (
     <div className={styles.contactContainer}>
+      <Helmet>
+        <meta name="description" content="Contact" />
+      </Helmet>
       <div className={styles.headTitle}>Contact</div>
 
       <div className={styles.firstSectionContact}>

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./ThankYou.module.scss";
+
 const ThankYou = () => {
   return (
     <div className={styles.thankYouContainer}>

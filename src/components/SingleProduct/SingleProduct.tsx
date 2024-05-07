@@ -4,6 +4,7 @@ import images from "./../../data/images";
 import { useParams } from "react-router-dom";
 import { productsData } from "../Products/Products";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const SingleProduct = () => {
   const { productId } = useParams();
@@ -17,6 +18,9 @@ const SingleProduct = () => {
 
   return (
     <div className={styles.singleProductContainer}>
+      <Helmet>
+        <meta name="description" content="SingleProduct" />
+      </Helmet>
       <div className={styles.headTitle}>Produs</div>{" "}
       <div className={styles.productSingle}>
         {product && (

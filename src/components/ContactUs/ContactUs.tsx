@@ -3,6 +3,7 @@ import styles from "./ContactUs.module.scss";
 import { orderProps, orderErrors } from ".././../utils/OrderInterfaces";
 import { sendOrderConfirmation } from "./../../services/emails";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ContactUs = () => {
   const [orderData, setOrderData] = useState<orderProps>({
@@ -79,6 +80,9 @@ const ContactUs = () => {
 
   return (
     <div className={styles.contactUsContainer}>
+      <Helmet>
+        <meta name="description" content="ContactUs" />
+      </Helmet>
       <div className={styles.headTitle}>Contacteaza-ne</div>
 
       <div className={styles.contactForm}>

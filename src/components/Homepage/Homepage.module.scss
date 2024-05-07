@@ -465,6 +465,12 @@
   letter-spacing: 0em;
   text-align: left;
   color: rgba(28, 34, 22, 1);
+  @include media("<tablet") {
+    font-size: 16px;
+  }
+  @include media(">=tablet", "<desktop") {
+    font-size: 18px;
+  }
 }
 
 .artSubTitle {
@@ -475,6 +481,12 @@
   line-height: 20px;
   letter-spacing: 0em;
   text-align: left;
+  @include media("<tablet") {
+    font-size: 12px;
+  }
+  @include media(">=tablet", "<desktop") {
+    font-size: 14px;
+  }
 }
 
 .userContainer {

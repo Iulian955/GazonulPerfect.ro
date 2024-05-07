@@ -96,12 +96,23 @@
     line-height: 19px;
     letter-spacing: 0em;
     text-align: left;
+    @include media("<tablet") {
+      font-size: 12px;
+    }
+    @include media(">=tablet", "<desktop") {
+      font-size: 14px;
+    }
   }
 
   .formBox {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    div {
+      display: flex;
+      align-items: center;
+    }
   }
 
   .formCheck {
@@ -111,6 +122,12 @@
     height: 17px;
     &:checked {
       background-color: red !important;
+    }
+    @include media("<tablet") {
+      width: 14px;
+      height: 14px;
+    }
+    @include media(">=tablet", "<desktop") {
     }
   }
 }
@@ -262,4 +279,11 @@
 .error {
   color: red;
   font-weight: 600;
+
+  @include media("<tablet") {
+    font-size: 12px;
+  }
+  @include media(">=tablet", "<desktop") {
+    font-size: 14px;
+  }
 }

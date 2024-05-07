@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../Portofoliu/Portofoliu.module.scss";
 import images from "./../../data/images";
+import { Helmet } from "react-helmet";
 
 const imagesByCategory = {
   "Sisteme de irigatii": [
@@ -52,6 +53,9 @@ const Portofoliu = () => {
 
   return (
     <div className={styles.portofoliuContainer}>
+      <Helmet>
+        <meta name="description" content="Portofoliu" />
+      </Helmet>
       <div className={styles.headTitle}>Portofoliu</div>
       <div className={styles.portLinks}>
         {categories.map((category) => (

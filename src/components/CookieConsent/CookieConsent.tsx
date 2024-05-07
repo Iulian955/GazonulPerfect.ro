@@ -7,6 +7,7 @@ import { CookiesTagConsent, userAcceptedCookies } from "../../data/constants";
 import styles from "./CookieConsent.module.scss";
 import images from "../../data/images";
 import allPathsURL from "../../data/allPathsURL.json";
+import { Helmet } from "react-helmet";
 
 const CookieConsent = () => {
   let pathname = window.location.pathname;

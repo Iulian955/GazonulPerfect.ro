@@ -47,13 +47,13 @@
 .headTitleBlog {
   color: rgba(253, 253, 253, 1);
   font-family: "Montserrat";
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 600;
   @include media("<tablet") {
-    font-size: 22px;
+    font-size: 18px;
   }
   @include media(">=tablet", "<desktop") {
-    font-size: 33px;
+    font-size: 28px;
   }
 }
 

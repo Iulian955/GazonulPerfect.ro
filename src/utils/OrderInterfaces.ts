@@ -13,20 +13,22 @@ export interface LocalStorPropsCart {
   currency: string;
 }
 export interface orderProps {
-  firstName: string;
-  lastName: string;
-  deliveryAddress: string;
-  city: string;
-  county: string;
+  name: string;
+  judet: string;
+  oras: string;
   phoneNo: string;
-  emailAddress?: string;
-  orderNotes?: string;
-  cartProducts: string;
-  cartSum?: number;
-  shippingTax?: number;
-  paymentMethod: string;
-  deliveryName?: string;
-  paymentStatus?: string;
+  emailAddress: string
+  message: string;
+}
+
+export interface orderErrors {
+  name: string;
+  judet: string;
+  oras: string;
+  phoneNo: string;
+  emailAddress: string
+  message: string;
+  consent : string;
 }
 
 export interface ProductModel {

@@ -4,6 +4,7 @@ import images from "./../../data/images";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import { IoIosArrowUp } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const ServicesPage = () => {
   const [visibleItems, setVisibleItems] = useState(7);
@@ -28,6 +29,8 @@ const ServicesPage = () => {
   const handleShowLess = () => {
     setVisibleItems((prevVisibleItems) => (prevVisibleItems > 7 ? prevVisibleItems - 7 : 7));
   };
+
+  const navigate = useNavigate();
   const yourData = [
     { image: images.servicesImg.dotari, text: "BobCat 751 si S130" },
     { image: images.servicesImg.dotari, text: "Tractor Mini 27 CP" },
@@ -69,7 +72,7 @@ const ServicesPage = () => {
               In maxim 4 ore de la decopertarea ruloului de gazon acesta va fi montat in curte.
             </div>
             <div className={styles.serviceBtn}>
-              <button>Contacteaza-ne</button>
+              <button onClick={() => (window.location.href = "/contactUs")}>Contacteaza-ne</button>
             </div>
           </div>
         </div>
@@ -85,7 +88,7 @@ const ServicesPage = () => {
               specifice.
             </div>
             <div className={styles.serviceBtn}>
-              <button>Contacteaza-ne</button>
+              <button onClick={() => navigate(`/contactUs`)}>Contacteaza-ne</button>
             </div>
           </div>
         </div>
@@ -101,7 +104,7 @@ const ServicesPage = () => {
               – in spatiu , intocmirea devizului de materiale si a materialului dendrologic.
             </div>
             <div className={styles.serviceBtn}>
-              <button>Contacteaza-ne</button>
+              <button onClick={() => navigate(`/contactUs`)}>Contacteaza-ne</button>
             </div>
           </div>
         </div>
@@ -118,7 +121,7 @@ const ServicesPage = () => {
               <br /> <br /> Evacuarea deseurilor este inclusa.
             </div>
             <div className={styles.serviceBtn}>
-              <button>Contacteaza-ne</button>
+              <button onClick={() => navigate(`/contactUs`)}>Contacteaza-ne</button>
             </div>
           </div>
         </div>
@@ -136,7 +139,7 @@ const ServicesPage = () => {
               <a href="">Vezi produsele folosite</a>
             </div>
             <div className={styles.serviceBtn}>
-              <button>Contacteaza-ne</button>
+              <button onClick={() => navigate(`/contactUs`)}>Contacteaza-ne</button>
             </div>
           </div>
         </div>

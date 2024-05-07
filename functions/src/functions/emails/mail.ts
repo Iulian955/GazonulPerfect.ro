@@ -3,7 +3,7 @@ import { applyCORSpolicy } from "../../constants/corsFunc";
 import { ResponseObject, transportOptions } from "../../constants/emailCons";
 import { generateInvoiceID } from "../../constants/utils";
 import { postOrderToDB } from "./dbEmail";
-import { emailAuth, adminUser } from "../../constants/credentials";
+import { emailAuth } from "../../constants/credentials";
 import { renderClientMail } from "./templates/clientOrderTemplate";
 import { renderAdminTemplate } from "./templates/admOrderConf";
 import { getDateAndHour } from "./../../constants/utils";
@@ -20,15 +20,15 @@ export const sendEmail = functions.https.onRequest(async (request, response) => 
     EMAILTO_CLIENT: "EMPTY"
   };
   const data = JSON.parse(request.body);
+
   await postOrderToDB(invoiceNumberID, data, getDateAndHour());
-  let cartProd = JSON.parse(data.cartProducts);
 
   transport
     .sendMail({
       from: emailAuth.email,
       to: data.emailAddress,
-      subject: "Comanda inregistrata, " + data.firstName,
-      html: renderClientMail(cartProd, invoiceNumberID, data)
+      subject: "Formular trimis ",
+      html: renderClientMail(data)
     })
     .then((emailClientResponse: any) => {
       ResponseData.EMAILTO_CLIENT = emailClientResponse;
@@ -36,16 +36,16 @@ export const sendEmail = functions.https.onRequest(async (request, response) => 
     });
 
   const transmitToAdmin = () => {
+    console.log("mail client :" , data.emailAddress);
     transport
       .sendMail({
-        from: emailAuth.email,
-        to: adminUser.email,
-        subject: "Comanda noua - " + data.firstName,
-        html: renderAdminTemplate(cartProd, invoiceNumberID, data)
+        from: data.emailAddress,
+        to: emailAuth.email,
+        subject: "Formular completat de " + data.name,
+        html: renderAdminTemplate(data)
       })
       .then((responseToAdmin: any) => {
         ResponseData.EMAILTO_ADMIN = responseToAdmin;
-
         response.send(ResponseData);
       });
   };

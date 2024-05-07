@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../SingleBlog/SingleBlog.module.scss";
 import images from "./../../data/images";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { blogPosts } from "../Blog/Blog";
 import { LuCalendarDays } from "react-icons/lu";
 import { FaArrowRight } from "react-icons/fa";
@@ -9,6 +9,7 @@ import { FaArrowRight } from "react-icons/fa";
 const SingleBlog = () => {
   const { blogId } = useParams();
   const blog = blogPosts.find((blog) => blog.id.toString() === blogId);
+
   return (
     <div className={styles.portofoliuContainer}>
       {blog && (

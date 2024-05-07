@@ -178,13 +178,13 @@
 }
 
 .infos {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 2.5rem;
   padding: 6%;
   @include media("<tablet") {
     gap: 0.5rem;
@@ -223,7 +223,7 @@
 
 .infoTitle {
   font-family: "Montserrat";
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0em;
@@ -239,7 +239,7 @@
 
 .infoSubTitle {
   font-family: "Montserrat";
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0em;
@@ -279,6 +279,13 @@
     }
   }
 
+  .redInput {
+    border-radius: 8px;
+    border: 2px solid red;
+    padding: 0.3rem 1rem;
+    transition: 0.5s;
+  }
+
   textarea {
     height: 100px;
     resize: none;
@@ -303,7 +310,8 @@
 
   .formBox {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .formCheck {
@@ -407,4 +415,9 @@
     padding: 8px 14px;
     border-radius: 30px;
   }
+}
+
+.error {
+  color: red;
+  font-weight: 600;
 }

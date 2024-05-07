@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import styles from "../Homepage/Homepage.module.scss";
 import images from "./../../data/images";
 import Slider from "react-slick";
@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { LuCalendarDays } from "react-icons/lu";
 import { FaArrowRight } from "react-icons/fa";
 import { blogPosts } from "../Blog/Blog";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type ArrowProps = {
   className?: string;
@@ -131,7 +131,7 @@ const Homepage = () => {
   const navigate = useNavigate();
 
   const handleProductClick = (blogId) => {
-    navigate(`/blog/${blogId}`);
+    window.location.href = `/blog/${blogId}`;
   };
 
   return (
@@ -143,7 +143,7 @@ const Homepage = () => {
             Din pasiune pentru gazon si spatii verzi. Suntem o echipa de profesionisti in domeniul spatiilor verzi.
           </div>
           <div className={styles.homeBtn}>
-            <button>Contacteaza-ne</button>{" "}
+            <button onClick={() => (window.location.href = "/contactUs")}>Contacteaza-ne</button>{" "}
           </div>
         </div>
 

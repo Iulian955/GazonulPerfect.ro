@@ -70,6 +70,13 @@
     }
   }
 
+  .redInput {
+    border-radius: 8px;
+    border: 2px solid red;
+    padding: 0.3rem 1rem;
+    transition: 0.5s;
+  }
+
   textarea {
     height: 100px;
     resize: none;
@@ -94,7 +101,8 @@
 
   .formBox {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .formCheck {
@@ -132,4 +140,16 @@
 
 .contactForm {
   padding: 2% 20%;
+
+  @include media("<tablet") {
+    padding: 5% 8%;
+  }
+  @include media(">=tablet", "<desktop") {
+    padding: 5% 20%;
+  }
+}
+
+.error {
+  color: red;
+  font-weight: 600;
 }

@@ -5,14 +5,12 @@ import "firebase/storage";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBU-XLXRpmXuGWH8D0XLFRGU4-UA-b_fbg",
-  authDomain: "sapunmontan.firebaseapp.com",
-  databaseURL: "https://sapunmontan-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "sapunmontan",
-  storageBucket: "sapunmontan.appspot.com",
-  messagingSenderId: "763434878339",
-  appId: "1:763434878339:web:287dd37cd472f368b5a2b6",
-  measurementId: "G-71TJGXC0TV"
+  apiKey: "AIzaSyC4ZVQIGCIWz18DdL-WhhuNuUkarN-MLIM",
+  authDomain: "gazonverde-2854b.firebaseapp.com",
+  projectId: "gazonverde-2854b",
+  storageBucket: "gazonverde-2854b.appspot.com",
+  messagingSenderId: "1040362977465",
+  appId: "1:1040362977465:web:546554d5bc5e8c3fb30368"
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

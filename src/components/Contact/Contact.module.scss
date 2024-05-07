@@ -69,6 +69,12 @@
       border-color: rgba(98, 146, 42, 1) !important;
     }
   }
+  .redInput {
+    border-radius: 8px;
+    border: 2px solid red;
+    padding: 0.3rem 1rem;
+    transition: 0.5s;
+  }
 
   textarea {
     height: 100px;
@@ -94,7 +100,8 @@
 
   .formBox {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .formCheck {
@@ -239,4 +246,20 @@
   @include media(">=tablet", "<desktop") {
     gap: 0.5rem;
   }
+}
+
+.containerStyle {
+  width: 100%;
+  height: 500px;
+  @include media("<tablet") {
+    width: 100%;
+    height: 300px;
+  }
+  @include media(">=tablet", "<desktop") {
+  }
+}
+
+.error {
+  color: red;
+  font-weight: 600;
 }

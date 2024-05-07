@@ -7,10 +7,11 @@ import { getType } from "../components/AdminArea/EditStrings/TableTypes";
 let destination: string = "";
 // const destination = "http://localhost:5000/sapunmontan/us-central1";
 if (process.env.NODE_ENV === "development") {
-  destination = "http://localhost:5000/sapunmontan/us-central1";
+  destination = "http://localhost:5000/thelawyers-d16f5/us-central1";
 } else {
-  destination = "https://us-central1-sapunmontan.cloudfunctions.net";
+  destination = "https://us-central1-thelawyers-d16f5.cloudfunctions.net";
 }
+
 
 export const requestOrdersList = async () => {
   return await fetch(`${destination}/requestOrders`, {
@@ -50,20 +51,13 @@ export const sendOrderConfirmation = async (data: orderProps) => {
     method: "POST",
     mode: "cors",
     body: JSON.stringify({
-      firstName: data.firstName,
-      lastName: data.lastName,
+      name: data.name,
       emailAddress: data.emailAddress,
-      city: data.city,
-      county: data.county,
+      oras: data.oras,
+      judet: data.judet,
       phoneNo: data.phoneNo,
-      paymentMethod: data.paymentMethod,
-      deliveryName: data.deliveryName,
-      deliveryAddress: data.deliveryAddress,
-      orderNotes: data.orderNotes,
-      cartSum: data.cartSum,
-      shippingTax: data.shippingTax,
-      cartProducts: data.cartProducts,
-      paymentStatus: data.paymentStatus
+      message: data.message,
+
     })
   })
     .then((res) => res)

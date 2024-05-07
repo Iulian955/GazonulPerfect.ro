@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter, useLocation } from "react-router-dom";
 import React, { useEffect, useState, lazy } from "react";
 import ReactGA from "react-ga4";
 import ReactRouter from "react-router";
@@ -22,6 +22,7 @@ import SingleBlog from "./components/SingleBlog/SingleBlog";
 import CookieComponent from "./components/CookieComponent/CookieComponent";
 import ProtectieDate from "./components/ProtectieDate/ProtectieDate";
 import ContactUs from "./components/ContactUs/ContactUs";
+import ThankYou from "./components/ThankYou/ThankYou";
 
 // export const ProductsContext = React.createContext<any[]>([]);
 
@@ -63,7 +64,7 @@ function App() {
       <CookieComponent onAccept={handleConsentAccepted} onReject={handleRejectCookies} />
       <BrowserRouter basename="/">
         <AuthProvider>
-          <Navbar />{" "}
+          <Navbar />
           <Routes>
             <Route path={`/`} element={<Homepage />} />
             <Route path={`/servicii`} element={<ServicesPage />} />
@@ -75,6 +76,7 @@ function App() {
             <Route path={`/products`} element={<Products />} />
             <Route path="/products/:productId" element={<SingleProduct />} />
             <Route path={`/protectieDate`} element={<ProtectieDate />} />
+            <Route path={"/thankyou"} element={<ThankYou />} />
           </Routes>
           <Footer />
         </AuthProvider>

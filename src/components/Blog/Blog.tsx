@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../Blog/Blog.module.scss";
 import images from "./../../data/images";
 import { LuCalendarDays } from "react-icons/lu";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const blogPosts = [
   {
@@ -646,7 +647,6 @@ export const blogPosts = [
 
 const Blog = () => {
   const navigate = useNavigate();
-
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 4;
 
@@ -660,7 +660,7 @@ const Blog = () => {
   const currentPosts = blogPosts.slice(indexOfFirstPost, indexOfLastPost);
 
   const handleProductClick = (blogId) => {
-    navigate(`/blog/${blogId}`);
+    window.location.href = `/blog/${blogId}`;
   };
 
   return (

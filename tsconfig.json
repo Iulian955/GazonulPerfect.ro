@@ -17,5 +17,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["./src/**/*.ts", "./src/setupTests.ts", "./setupTests.ts", "src/components/context/AuthProvider.tsx"]
+  "include": ["./src/**/*.ts", "./src/setupTests.ts", "./setupTests.ts", "src/components/context/AuthProvider.tsx", "src/components/ThankYou/ThankYou.tsx"]
 }

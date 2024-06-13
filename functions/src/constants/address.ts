@@ -1,2 +1,2 @@
-export const remoteAddress = "https://montanair.ro";
+export const remoteAddress = "https://gazonperfect.ro";
 export const remoteAddressLocal = "http://localhost:3000";

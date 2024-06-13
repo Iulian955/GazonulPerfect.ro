@@ -41,11 +41,11 @@ const SingleBlog = () => {
             <div className={styles.bigImg}>
               <img src={blog.imageUrl} alt="img" />
             </div>
-            <div className={styles.smallImg}>
+            {/* <div className={styles.smallImg}>
               <img src={blog.imageUrl2} alt="img" />
               <img src={blog.imageUrl3} alt="img" />
               <img src={blog.imageUrl4} alt="img" />
-            </div>
+            </div> */}
           </div>
 
           <div className={styles.blogDescription}>{blog.moreDescription}</div>

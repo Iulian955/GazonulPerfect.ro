@@ -16,7 +16,7 @@ export const blogPosts = [
     imageUrl4: images.blog.blog1,
     author: "gazonperfect.ro",
     date: "09 Iulie 2023",
-    category: "Constructii",
+    category: "Gazon",
     title: "10 sfaturi pentru montajul si intretinerea gazonului pe perioada verii",
     subTitle:
       "Montajul rulourilor de gazon in timpul verii necesita respectarea catorva pasi esentiali pentru a obtine un gazon frumos si sanatos. In continuare va oferim 10 sfaturi pentru a realiza un montaj gazon Ilfov si montaj gazon Bucuresti reusit si a asigura o crestere optima a rulourilor de gazon Ilfov si a rulourilor de gazon Bucuresti.",
@@ -120,7 +120,7 @@ export const blogPosts = [
     imageUrl4: images.blog.blog2,
     author: "gazonperfect.ro",
     date: "02 Iulie 2023",
-    category: "Constructii",
+    category: "Defrisare",
     title: "Cum au evoluat defrisarile de terenuri in 2022",
     subTitle:
       "In anul 2022, defrisarea terenurilor la nivel global a continuat sa fie o problema serioasa si o preocupare majora in ceea ce priveste conservarea mediului si biodiversitatea. Defrisarea padurilor si a altor suprafete impadurite a continuat sa aiba loc intr-un ritm alarmant, avand consecinte semnificative asupra ecosistemelor si schimbarilor climatice.",
@@ -185,7 +185,7 @@ export const blogPosts = [
     imageUrl4: images.blog.blog3,
     author: "gazonperfect.ro",
     date: "29 Martie 2024",
-    category: "Constructii",
+    category: "Irigatii",
     title: "Cum alegem tipul potrivit de sistem de irigatii",
     subTitle:
       "Alegerea tipului potrivit de sisteme de irigatii Ilfov si sisteme de irigatii Bucuresti este esentiala pentru a asigura o utilizare eficienta a apei si o distributie uniforma pe teren. Exista diferite tipuri de sisteme de irigatii disponibile, iar selectia potrivita depinde de necesitatile specifice ale zonei si de potentialul de intrebuintare. ",
@@ -271,14 +271,14 @@ export const blogPosts = [
 
   {
     id: 4,
-    imageUrl: images.blog.blog4,
+    imageUrl: images.blog.curatare,
     imageUrl2: images.blog.blog4,
     imageUrl3: images.blog.blog4,
     imageUrl4: images.blog.blog4,
     author: "gazonperfect.ro",
     date: "21 August 2023",
     category: "Constructii",
-    title: "Curatarea terenurilor in contextul urbanizarii",
+    title: "Defrisare",
     subTitle:
       "Curatarea terenurilor la nivel global reprezinta un proces esential in dezvoltarea si utilizarea sustenabila a resurselor naturale si terenurilor disponibile. Aceasta practica are ca scop indepartarea vegetatiei si a altor obstacole, creand astfel spatiu pentru diferite activitati umane, precum agricultura, constructia de infrastructura sau dezvoltarea urbana. ",
     readMoreLink: "/",
@@ -344,7 +344,7 @@ export const blogPosts = [
     imageUrl4: images.blog.blog5,
     author: "gazonperfect.ro",
     date: "17 ianuarie 2024",
-    category: "Constructii",
+    category: "Defrisare",
     title: "Statistici defrisare teren in Romania",
     subTitle:
       "In articolul de astazi o sa va prezentam o serie de statistici oferite de Global Forest Watch, ce va vor ajuta sa va conturati o imagine mai clara in legatura cu fenomenul de defrisare teren Ilfov si defrisare teren Bucuresti din Romania. ",
@@ -417,13 +417,13 @@ export const blogPosts = [
 
   {
     id: 6,
-    imageUrl: images.blog.blog6,
+    imageUrl: images.blog.irigare,
     imageUrl2: images.blog.blog6,
     imageUrl3: images.blog.blog6,
     imageUrl4: images.blog.blog6,
     author: "gazonperfect.ro",
     date: "22 Aprilie 2023",
-    category: "Constructii",
+    category: "Irigatii",
     title: "Sisteme de irigatii potrivite pentru gazon si gradina",
     subTitle:
       "Deoarece anii trecuti au fost destul de secetosi, am inregistrat o crestere foarte mare a cererii de montaj sisteme de irigatii Ilfov si montaj sisteme de irigatii Bucuresti – atat pe segmentul agricol, cat si pe cel rezidential.",
@@ -483,13 +483,13 @@ export const blogPosts = [
   },
   {
     id: 7,
-    imageUrl: images.blog.blog6,
+    imageUrl: images.blog.pozaNoua,
     imageUrl2: images.blog.blog6,
     imageUrl3: images.blog.blog6,
     imageUrl4: images.blog.blog6,
     author: "gazonperfect.ro",
     date: "20 Decembrie 2023",
-    category: "Constructii",
+    category: "Defrisare",
     title: "5 moduri in care curatarea terenului ii sporeste valoarea acestuia",
     subTitle:
       "Ca o scurta introducere, defrisarea terenurilor este procesul de indepartare a copacilor si a altor plante de pe o suprafata de teren. Scopul procesului de defrisare teren Ilfov si defrisare teren Bucuresti este de a permite dezvoltarea agricola sau de alta natura sau de a crea spatiu pentru constructii noi.",
@@ -573,7 +573,7 @@ export const blogPosts = [
     imageUrl4: images.blog.blog6,
     author: "gazonperfect.ro",
     date: "20 Decembrie 2023",
-    category: "Constructii",
+    category: "Gazon",
     title: "Lucrarile de primavara ale gazonului",
     subTitle:
       "A venit iarasi primavara – chiar daca mai mult doar calendaristic. E drept ca iarna aceasta a fost una blanda fata de cele din anii anteriori, in special in zonele de campie, iar multe tipuri de montaj gazon Ilfov si montaj gazon Bucuresti nu au mai intrat in hibernare in astfel de conditii.",
@@ -649,7 +649,7 @@ export const blogPosts = [
 const Blog = () => {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 4;
+  const postsPerPage = 6;
 
   const handlePageClick = (page) => {
     setCurrentPage(page);

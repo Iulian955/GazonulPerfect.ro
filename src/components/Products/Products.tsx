@@ -640,7 +640,7 @@ const Products = () => {
 
     if (Object.keys(newErrors).length === 0) {
       sendOrderConfirmation(orderData);
-      navigate(`/thankyou`);
+      window.location.href = `/thankyou`;
       console.log("Date trimise");
     }
   };
@@ -703,7 +703,7 @@ const Products = () => {
                 </div>
                 <div className={styles.contactTexts}>
                   <div className={styles.infoTitle}>Adresa</div>
-                  <div className={styles.infoSubTitle}>gazonulverde@yahoo.com</div>{" "}
+                  <div className={styles.infoSubTitle}>Strada Ronda nr. 25, Chitila, jud. Ilfov</div>{" "}
                 </div>
               </div>
 

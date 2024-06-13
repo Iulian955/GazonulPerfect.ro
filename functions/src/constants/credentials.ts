@@ -18,6 +18,6 @@ export const getAuthToken = (body: any) => {
 };
 
 export const emailAuth = {
-  email: "dragulescuiuli@gmail.com",
-  password: "jgra sgou xafi qnmb"
+  email: "gazonulverde.info@gmail.com",
+  password: "weqg ldxn uxtm tgnh"
 };

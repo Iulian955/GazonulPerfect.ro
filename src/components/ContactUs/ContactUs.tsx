@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./ContactUs.module.scss";
 import { orderProps, orderErrors } from ".././../utils/OrderInterfaces";
 import { sendOrderConfirmation } from "./../../services/emails";
@@ -14,6 +14,10 @@ const ContactUs = () => {
     judet: "",
     phoneNo: ""
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [errors, setErrors] = useState<Partial<orderErrors>>({});
 
@@ -73,7 +77,7 @@ const ContactUs = () => {
 
     if (Object.keys(newErrors).length === 0) {
       sendOrderConfirmation(orderData);
-      navigate(`/thankyou`);
+      window.location.href = `/thankyou`;
       console.log("Date trimise");
     }
   };

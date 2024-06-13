@@ -21,6 +21,11 @@ export const sendEmail = functions.https.onRequest(async (request, response) => 
   };
   const data = JSON.parse(request.body);
 
+
+  functions.logger.info("Response data:");
+
+  response.send("Message !!!");
+
   await postOrderToDB(invoiceNumberID, data, getDateAndHour());
 
   transport

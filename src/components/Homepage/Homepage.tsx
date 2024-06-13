@@ -25,12 +25,12 @@ const Homepage = () => {
         top: "50%",
         right: "25px",
         transform: "translate(0, -50%)",
-        zIndex: 2
+        zIndex: 1
       }}
       onClick={onClick}
     >
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 15L10 10L4 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M4 15L10 10L4 5" stroke="white" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </div>
   );
@@ -48,13 +48,13 @@ const Homepage = () => {
       onClick={onClick}
     >
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M15 5L9 10L15 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M15 5L9 10L15 15" stroke="white" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </div>
   );
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
     lazyLoad: true,
@@ -64,6 +64,24 @@ const Homepage = () => {
     speed: 400,
     slidesToShow: 3,
     slidesToScroll: 1,
+    customPaging: (i) => (
+      <div
+        style={{
+          width: "10px",
+          height: "10px",
+          borderRadius: "50%",
+          background: "white",
+          border: "2px solid black",
+          margin: "0 5px",
+          marginTop: "23px"
+        }}
+      ></div>
+    ),
+    appendDots: (dots) => (
+      <div>
+        <ul style={{ display: "flex", justifyContent: "center" }}>{dots.slice(0, 3)}</ul>
+      </div>
+    ),
     responsive: [
       {
         breakpoint: 1124,
@@ -166,7 +184,7 @@ const Homepage = () => {
             <div className={styles.systems}>
               <img src={images.homepage.proiecte} alt="logo" />
               <div className={styles.systemTitle}>200+ de proiecte</div>
-              <div className={styles.systemSubTitle}>și servicii mentenanță</div>
+              <div className={styles.systemSubTitle}>și servicii de mentenanță</div>
             </div>
           </div>
         </div>

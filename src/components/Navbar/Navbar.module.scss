@@ -271,7 +271,7 @@ nav ul li a {
   font-weight: bold;
   position: relative;
   font-family: $myFont;
-  font-size: 1.1vw !important;
+  font-size: clamp(12px, 1.1vw, 24px) !important;
   @include media("<tablet") {
     display: black;
     font-size: 18px !important;

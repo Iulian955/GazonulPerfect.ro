@@ -105,7 +105,7 @@ const Contact = () => {
 
     if (Object.keys(newErrors).length === 0) {
       sendOrderConfirmation(orderData);
-      navigate(`/thankyou`);
+      window.location.href = `/thankyou`;
       console.log("Date trimise");
     }
   };

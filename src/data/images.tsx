@@ -120,7 +120,10 @@ const images = {
     blog3: require("./../media/assets/pics/blog/blog3.jpeg").default,
     blog4: require("./../media/assets/pics/blog/blog4.jpeg").default,
     blog5: require("./../media/assets/pics/blog/blog5.jpeg").default,
-    blog6: require("./../media/assets/pics/blog/blog6.jpeg").default
+    blog6: require("./../media/assets/pics/blog/blog6.jpeg").default,
+    irigare: require("./../media/assets/pics/blog/irigare.jpeg").default,
+    curatare: require("./../media/assets/pics/blog/curatare.jpeg").default,
+    pozaNoua: require("./../media/assets/pics/blog/pozaNoua.jpeg").default
   },
 
   products: {

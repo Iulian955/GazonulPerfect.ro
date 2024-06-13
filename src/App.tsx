@@ -19,7 +19,7 @@ import Blog from "./components/Blog/Blog";
 import Products from "./components/Products/Products";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
 import SingleBlog from "./components/SingleBlog/SingleBlog";
-import CookieComponent from "./components/CookieComponent/CookieComponent";
+// import CookieComponent from "./components/CookieComponent/CookieComponent";
 import ProtectieDate from "./components/ProtectieDate/ProtectieDate";
 import ContactUs from "./components/ContactUs/ContactUs";
 import ThankYou from "./components/ThankYou/ThankYou";
@@ -61,7 +61,7 @@ function App() {
 
   return (
     <div className="App">
-      <CookieComponent onAccept={handleConsentAccepted} onReject={handleRejectCookies} />
+      {/* <CookieComponent onAccept={handleConsentAccepted} onReject={handleRejectCookies} /> */}
       <BrowserRouter basename="/">
         <AuthProvider>
           <Navbar />

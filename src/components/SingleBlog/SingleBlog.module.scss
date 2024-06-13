@@ -138,35 +138,38 @@
 
 .blogImages {
   display: grid;
-  grid-template-columns: 65% 30%;
+  grid-template-columns: 100%;
   background-color: rgba(255, 255, 255, 1);
   padding: 5% 8%;
   gap: 1rem;
 }
 
-.smallImg {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 5px;
+// .smallImg {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   gap: 5px;
 
-  img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    @include media("<tablet") {
-      height: 100px;
-    }
-    @include media(">=tablet", "<desktop") {
-      height: 150px;
-    }
-  }
-}
+//   img {
+//     width: 100%;
+//     height: 200px;
+//     object-fit: cover;
+//     @include media("<tablet") {
+//       height: 100px;
+//     }
+//     @include media(">=tablet", "<desktop") {
+//       height: 150px;
+//     }
+//   }
+// }
 
 .bigImg {
+  width: 100%;
+  height: 100%;
   img {
     width: 100%;
-    height: 610px;
+    height: 750px;
     object-fit: cover;
+    object-position: center;
     @include media("<tablet") {
       height: 310px;
     }
